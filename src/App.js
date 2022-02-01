@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header from "./Header";
+import HeroCard from "./HeroCard";
+const hash= '41a55cd69acd6d04288ffba35c24a87f'
+import axios from 'axios'
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+
+      <div className="scroll">
+        <div className="card">
+          <div className="carCol">
+            <HeroCard/>
+          </div>
+          <div className="carCol">
+          <HeroCard/>
+          </div>
+          <div className="carCol">
+          <HeroCard/>
+          </div>
+        </div>
+      </div>
+
+
+
+
     </div>
   );
 }
